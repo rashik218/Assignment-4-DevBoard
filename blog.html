@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .primary-color {
+        background-color: #3752fd;
+      }
+      .secondary-color {
+        background-color: #f4f7ff;
+      }
+    </style>
+  </head>
+  <body class="max-w-[1536px] font-poppins mx-auto secondary-color">
+    <nav class="flex justify-between mt-6 p-6 bg-white rounded-2xl">
+      <div class="logo flex items-center gap-3">
+        <img src="./assets/logo.png" alt="" />
+        <h1 class="text-[35px]">Deve <span class="font-bold">Board</span></h1>
+      </div>
+      <div>
+        <button
+          id="backBtn"
+          onclick="redirectToMain()"
+          class="px-4 py-3 rounded-md primary-color text-white font-semibold"
+        >
+          Back to Desk
+        </button>
+      </div>
+    </nav>
+    <main class="mt-8 space-y-5">
+      <h1 class="text-xl font-bold text-center">Blogs</h1>
+      <div class="bg-white p-4 rounded-xl">
+        <h1 class="text-xl font-semibold pb-4 border-b-2 border-dashed">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </h1>
+        <p class="pt-4 text-[18px]">
+          We can select elements in the DOM in several ways, lke getElementsByTagName, getElementById, getElementsByClassName, querySelector, querySelectorAll. 
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded-xl">
+        <h1 class="text-xl font-semibold pb-4 border-b-2 border-dashed">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent ?
+        </h1>
+        <p class="pt-4 text-[18px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          exercitationem, accusantium cupiditate vero sint autem sunt debitis!
+          Porro, dicta sit. Eaque alias officia sapiente tempore tempora placeat
+          tenetur voluptate dolores.
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded-xl">
+        <h1 class="text-xl font-semibold pb-4 border-b-2 border-dashed">
+          Question-3: What is event delegation in the DOM?
+        </h1>
+        <p class="pt-4 text-[18px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          exercitationem, accusantium cupiditate vero sint autem sunt debitis!
+          Porro, dicta sit. Eaque alias officia sapiente tempore tempora placeat
+          tenetur voluptate dolores.
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded-xl">
+        <h1 class="text-xl font-semibold pb-4 border-b-2 border-dashed">
+          Question-4: What is event bubbling in the DOM?
+        </h1>
+        <p class="pt-4 text-[18px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          exercitationem, accusantium cupiditate vero sint autem sunt debitis!
+          Porro, dicta sit. Eaque alias officia sapiente tempore tempora placeat
+          tenetur voluptate dolores.
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded-xl">
+        <h1 class="text-xl font-semibold pb-4 border-b-2 border-dashed">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </h1>
+        <p class="pt-4 text-[18px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          exercitationem, accusantium cupiditate vero sint autem sunt debitis!
+          Porro, dicta sit. Eaque alias officia sapiente tempore tempora placeat
+          tenetur voluptate dolores.
+        </p>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

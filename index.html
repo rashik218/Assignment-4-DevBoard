@@ -25,7 +25,7 @@
       }
     </style>
   </head>
-  <body class="max-w-[1536px] font-poppins mx-auto bg-[#d2dcf7]">
+  <body class="max-w-[1536px] font-poppins mx-auto secondary-color">
     <nav class="flex justify-between mt-6 p-6 bg-white rounded-2xl">
       <div class="logo flex items-center gap-3">
         <img src="./assets/logo.png" alt="" />
@@ -55,13 +55,14 @@
               </div>
               <div class="">
                 <p class="font-medium">Task Assigned</p>
-                <h2 id="task-number" class="text-[32px] font-bold">05</h2>
+                <h2 id="task-number" class="text-[32px] font-bold">6</h2>
               </div>
             </div>
           </div>
           <div
-            id="discover-btn"
-            class="w-[524px] py-6 pl-10 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl flex items-center gap-[22px]"
+            id="discoverBtn"
+            onclick="redirectToBlogs()"
+            class="w-[524px] py-6 pl-10 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl flex items-center gap-[22px] cursor-pointer"
           >
             <img src="./assets/board.png" alt="" />
             <p class="text-2xl text-white font-medium">
@@ -78,9 +79,9 @@
                 <img class="" src="./assets/calender.png" alt="" />
               </div>
               <div class="">
-                <p class="font-medium">Wed ,</p>
-                <h2 id="task-number" class="text-[22px] font-bold">
-                  Jul 28 2025
+                <p id="day" class="font-medium">Wed ,</p>
+                <h2 id="month-year" class="text-[22px] font-bold">
+                  
                 </h2>
               </div>
             </div>
@@ -249,5 +250,7 @@
         <div id="task-massage"></div>
       </section>
     </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
