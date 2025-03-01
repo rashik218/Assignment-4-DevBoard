@@ -67,8 +67,9 @@ for (const completeBtn of allCompleteBtns) {
   });
 }
 
-document.getElementById("clear-btn")
+document
+  .getElementById("clear-btn")
   .addEventListener("click", function (event) {
     const massageContainer = document.getElementById("task-massage");
-    massageContainer.remove(massageContainer.childNodes[0]);
+    massageContainer.innerHTML="";
   });
