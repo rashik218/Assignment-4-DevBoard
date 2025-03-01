@@ -1,4 +1,5 @@
-document.getElementById("clear-btn")
+document
+  .getElementById("clear-btn")
   .addEventListener("click", function (event) {
     const massageContainer = document.getElementById("task-massage");
     massageContainer.innerHTML = "";
@@ -12,7 +13,8 @@ document.getElementById("change-bg").addEventListener("click", function () {
     "bg-lime-200",
     "bg-cyan-300",
     "bg-sky-400",
-    "bg-fuchsia-300"
+    "bg-fuchsia-300",
+    "bg-gray-700",
   ];
   const body = document.body;
   const randomColorIndex = Math.floor(Math.random() * bgColors.length);
@@ -54,7 +56,8 @@ for (const completeBtn of allCompleteBtns) {
       ampm = "AM";
     }
     hour = hour % 12 || 12;
-    alert("Board update Successfully");
+    const isConfirmed = confirm("Board Update Successfully");
+    if (!isConfirmed) return;
     const massageContainer = document.getElementById("task-massage");
     const title = event.target.parentNode.parentNode.childNodes[3].innerText;
 
