@@ -7,4 +7,4 @@ function getInnerTextByID(id){
 function setInnerTextByIdandvalue(id, value){
   document.getElementById(id).innerText= value;
 }
-document.querySelectorAll
+

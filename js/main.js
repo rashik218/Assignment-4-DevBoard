@@ -1,3 +1,26 @@
+document.getElementById("clear-btn")
+  .addEventListener("click", function (event) {
+    const massageContainer = document.getElementById("task-massage");
+    massageContainer.innerHTML = "";
+  });
+
+document.getElementById("change-bg").addEventListener("click", function () {
+  const bgColors = [
+    "bg-gray-200",
+    "bg-red-200",
+    "bg-purple-200",
+    "bg-lime-200",
+    "bg-cyan-300",
+    "bg-sky-400",
+    "bg-fuchsia-300"
+  ];
+  const body = document.body;
+  const randomColorIndex = Math.floor(Math.random() * bgColors.length);
+  const randomColor = bgColors[randomColorIndex];
+  body.classList.remove(...bgColors);
+  body.classList.add(randomColor);
+});
+
 function redirectToBlogs() {
   window.location.href = "./blog.html";
 }
@@ -21,7 +44,7 @@ const allCompleteBtns = document.querySelectorAll(".completed-btn");
 for (const completeBtn of allCompleteBtns) {
   completeBtn.addEventListener("click", function (event) {
     const newTime = new Date();
-    const hour = newTime.getHours();
+    let hour = newTime.getHours();
     const minute = newTime.getMinutes();
     const second = newTime.getSeconds();
     let ampm = "";
@@ -30,6 +53,7 @@ for (const completeBtn of allCompleteBtns) {
     } else {
       ampm = "AM";
     }
+    hour = hour % 12 || 12;
     alert("Board update Successfully");
     const massageContainer = document.getElementById("task-massage");
     const title = event.target.parentNode.parentNode.childNodes[3].innerText;
@@ -46,7 +70,7 @@ for (const completeBtn of allCompleteBtns) {
       "mb-5"
     );
     div.innerText = `
-    You have completed the task ${title} at ${hour}: ${minute}: ${second} ${ampm}
+    You have completed the task ${title} at 0${hour}: ${minute}: ${second} ${ampm}
     `;
     massageContainer.appendChild(div);
     const taskNumber = getInnerTextByID("task-number");
@@ -66,10 +90,3 @@ for (const completeBtn of allCompleteBtns) {
     }
   });
 }
-
-document
-  .getElementById("clear-btn")
-  .addEventListener("click", function (event) {
-    const massageContainer = document.getElementById("task-massage");
-    massageContainer.innerHTML="";
-  });
