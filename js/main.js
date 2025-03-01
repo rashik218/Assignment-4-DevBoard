@@ -73,7 +73,7 @@ for (const completeBtn of allCompleteBtns) {
       "mb-5"
     );
     div.innerText = `
-    You have completed the task ${title} at 0${hour}: ${minute}: ${second} ${ampm}
+    You have completed the task ${title} at ${hour}: ${minute}: ${second} ${ampm}
     `;
     massageContainer.appendChild(div);
     const taskNumber = getInnerTextByID("task-number");
